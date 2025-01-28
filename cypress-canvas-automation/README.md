@@ -51,7 +51,7 @@ set LT_ACCESS_KEY="LT_ACCESS_KEY"
 
 **Step 4**
 
-For execution on LambdaTest, add the credentials (i.e. LambdaTest username & access-key) to the [following lines](https://github.com/hjsblogger/canvas-automation-selenium-cypress/blob/main/cypress-demo/lambdatest-config.json#L3).
+For execution on LambdaTest, add the credentials (i.e. LambdaTest username & access-key) to the [following lines](https://github.com/hjsblogger/cypress-master-repository/edit/main/cypress-canvas-automation/blob/main/demo/lambdatest-config.json#L3).
 
 **Step 5**
 
