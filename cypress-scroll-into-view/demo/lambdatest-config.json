@@ -1,7 +1,7 @@
 {
    "lambdatest_auth": {
-      "username": "himanshuj",
-      "access_key": "URsVCP7vFs"
+      "username": "LT_USERNAME",
+      "access_key": "LT_ACCESS_KEY"
    },
    "browsers": [
       {
