@@ -1,6 +1,6 @@
 <img width="826" height="500" alt="Banner" src="https://github.com/user-attachments/assets/a2bf5a77-df44-41a0-96a5-4021204042b0">
 
-This repo contains implementation for automating interactions with Canvas elements using Selenium (+ Python) and Cypress. The tests are executed on the [LambdaTest cloud grid](http://www.lambdatest.com?fp_ref=himanshu15), but the same tests can also work with the respective test frameworks installed on the local machine.
+This repo contains implementation for automating interactions with Canvas elements using Cypress. The tests are executed on the [LambdaTest cloud grid](http://www.lambdatest.com?fp_ref=himanshu15), but the same tests can also work with the respective test frameworks installed on the local machine.
 
 ## Canvas Element Handling With Cypress
 
