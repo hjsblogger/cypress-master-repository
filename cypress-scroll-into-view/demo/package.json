@@ -1,7 +1,7 @@
 {
   "name": "canvas-automation-cypress",
   "version": "1.0.0",
-  "description": "Handling Canvas Elements in Cypress",
+  "description": "ScrollIntoView Demo with Cypress",
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open",
