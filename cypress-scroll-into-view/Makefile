@@ -32,7 +32,7 @@ cloud-scroll-into-view-cypress:
 .PHONY: clean
 clean:
     # This helped: https://gist.github.com/hbsdev/a17deea814bc10197285
-	find . | grep -E "(__pycache__|\.pyc$$)" | xargs rm -rf
+	find . -type f \( -name "*.mp4" -o -name "*.zip" \) -exec rm -rf {} +
 	@echo "Clean Succeeded"
 
 .PHONY: distclean
