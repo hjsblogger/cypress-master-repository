@@ -66,7 +66,7 @@ describe('Test: Scroll Into View', () => {
 
 it('Window ScrollIntoView Demo - Infinite Scroll', () => 
 {
-    const cameraImage = '[src="/static/img/59851-A.jpg"]';
+    const cameraImage = '[src="/static/img/92905-A.jpg"]';
 
     cy.visit(urls.url2);
 
@@ -122,7 +122,7 @@ it('Window ScrollIntoView Demo - Infinite Scroll', () =>
           cy.wait(4000);
 
           /* Verify if the respective product page is open */
-          cy.url().should('include', '59851-A');
+          cy.url().should('include', '92905-A');
         }      
       }
       catch (error) 
