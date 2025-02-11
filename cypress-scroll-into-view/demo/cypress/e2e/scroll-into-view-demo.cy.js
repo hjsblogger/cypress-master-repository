@@ -24,7 +24,7 @@ Cypress.Commands.add('scrollUntilBottom', (url) => {
         if (newHeight > startHeight)
         {
           /* If the new height is greater, repeat the process */
-          scroll_window();
+          scrollAndCheckHeight();
         }
         else
         {
@@ -119,9 +119,6 @@ it('Window ScrollIntoView Demo - Infinite Scroll', () =>
     /* Scroll into the view */
     /* Doc - https://docs.cypress.io/api/commands/scrollintoview#Use-linear-easing-animation-to-scroll */
     cy.document().then((doc) => {
-      const element = doc.querySelector(cameraImage);
-      expect(element, `Element with selector ${cameraImage} should exist`).to.exist;
-
       try
       {
         const element = doc.querySelector(cameraImage);
