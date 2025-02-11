@@ -1,6 +1,43 @@
 /* Official Documentation */
 /* https://docs.cypress.io/api/commands/scrollintoview */
 
+/* Cypress Custom Command - Scroll till end of page */
+/* Python equivalent */
+/* https://github.com/hjsblogger/web-scraping-with-python/blob/main/pageobject/helpers.py#L96 */
+/* https://github.com/hjsblogger/web-scraping-with-python/blob/main/pageobject/helpers.py#L111 */
+
+/* Also took help of AI to covert the Python code to Cypress custom command in JS */
+Cypress.Commands.add('scrollUntilBottom', (url) => {
+    cy.visit(url); // Visit the provided URL
+
+    const scroll_window = () => {
+      cy.window().then((win) => {
+        const startHeight = win.document.body.scrollHeight;
+        win.scrollTo(0, startHeight);
+
+        /* Wait for the content to load */
+        cy.wait(2000);
+
+        /* Check the new scroll height */
+        const newHeight = win.document.documentElement.scrollHeight;
+
+        if (newHeight > startHeight)
+        {
+          /* If the new height is greater, repeat the process */
+          scrollAndCheckHeight();
+        }
+        else
+        {
+          /* End of the page reached */
+          cy.log('Reached the end of the page');
+        }
+      });
+    };
+
+    scroll_window();
+});
+
+
 describe('Test: Scroll Into View', () => {
 
   let urls;
@@ -23,7 +60,7 @@ describe('Test: Scroll Into View', () => {
       /* Wait till the DOM contents are loaded */
       /* in this case, it is only the canvas element */
       cy.document().should((doc) => {
-      expect(doc.readyState).to.equal('complete');
+        expect(doc.readyState).to.equal('complete');
       });
   
       /* Scroll to the bottom */
@@ -76,16 +113,8 @@ it('Window ScrollIntoView Demo - Infinite Scroll', () =>
       expect(doc.readyState).to.equal('complete');
     });
 
-    /* Scroll to the bottom */
-    cy.scrollTo('bottom');
-
-    cy.wait(1000);
-
-    /* Scroll back to the top */
-    cy.scrollTo('top');
-
-    /* Additional cushioning for page loading */
-    cy.wait(2000);
+    /* Scroll till the end of page is reached */
+    cy.scrollUntilBottom(urls.url2);
     
     /* Scroll into the view */
     /* Doc - https://docs.cypress.io/api/commands/scrollintoview#Use-linear-easing-animation-to-scroll */
