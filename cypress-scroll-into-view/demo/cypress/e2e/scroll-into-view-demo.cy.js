@@ -24,7 +24,7 @@ Cypress.Commands.add('scrollUntilBottom', (url) => {
         if (newHeight > startHeight)
         {
           /* If the new height is greater, repeat the process */
-          scrollAndCheckHeight();
+          scroll_window();
         }
         else
         {
