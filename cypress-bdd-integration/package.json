@@ -1,0 +1,44 @@
+{
+  "name": "cypress-bdd-integration",
+  "version": "1.0.0",
+  "description": "Demonstration of Cypress with Cucumber BDD using cypress-cucumber-preprocessor",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:chrome": "cypress run --browser=chrome"
+  },
+  "keywords": [
+    "cypress",
+    "test",
+    "automation",
+    "web",
+    "automation",
+    "testing",
+    "cypress-bdd",
+    "cypress-cucumber-preprocessor"
+  ],
+  "author": "Himanshu Jagdish Sheth",
+  "license": "ISC",
+  "devDependencies":
+  {
+    "cypress": "^13.3.3",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "typescript": "latest"
+  },
+  "dependencies": 
+  {
+    "@badeball/cypress-cucumber-preprocessor": "latest",
+    "@bahmutov/cypress-esbuild-preprocessor": "latest",
+    "dotenv": "^16.4.5"
+  },
+  "cypress-cucumber-preprocessor": {
+     "json": {
+       "enabled": false
+     },
+     "stepDefinitions":
+     [
+       "cypress/e2e/step_defs/*.{js,ts}",
+       "cypress/e2e/com_step_defs/*.{js,ts}"
+     ]
+   }
+}
