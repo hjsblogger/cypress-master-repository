@@ -1,9 +1,4 @@
-import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor';
-
-Given('I navigate to LambdaTest ECommerce Playground', () =>
-{
-  cy.visit('https://ecommerce-playground.lambdatest.io/');
-});
+import { When, Then } from '@badeball/cypress-cucumber-preprocessor';
 
 When('I enter {string} in the search box', (searchTerm) =>
 {
