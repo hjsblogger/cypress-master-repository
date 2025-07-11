@@ -1,0 +1,42 @@
+{
+   "lambdatest_auth": {
+      "username": "${LT_USERNAME}",
+      "access_key": "${LT_ACCESS_KEY}"
+   },
+   "browsers": [
+      {
+         "browser": "Chrome",
+         "platform": "Windows 11",
+         "versions": [
+            "latest"
+         ]
+      },
+      {
+         "browser": "Chrome",
+         "platform": "Windows 11",
+         "versions": [
+            "latest-1"
+         ]
+      }
+   ],
+   "run_settings": {
+      "reporter_config_file": "",
+      "build_name": "[Demonstration] Cypress with Cucumber BDD using cypress-cucumber-preprocessor",
+      "project-name": "cypress-cucumber-bdd-demo",
+      "parallels": 2,
+      "specs": "./cypress/e2e/scenarios/*.feature",
+      "ignore_files": "",
+      "network": true,
+      "headless": false,
+      "npm_dependencies": {
+         "cypress": "^12.17.4",
+         "@badeball/cypress-cucumber-preprocessor": "^15.0.0",
+         "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+         "@faker-js/faker": "^8.1.0"
+      }
+   },
+   "tunnel_settings": {
+      "tunnel": false,
+      "tunnel_name": null
+   }
+}
