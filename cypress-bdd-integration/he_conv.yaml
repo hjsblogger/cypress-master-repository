@@ -20,8 +20,8 @@ cacheDirectories:
   - cypressCache
 env:
   CYPRESS_CACHE_FOLDER: cypressCache
-  HYPEREXECUTE_CUSTOM_BUILD: "[Demonstration] Cypress with Cucumber BDD using
-    cypress-cucumber-preprocessor"
+  HYPEREXECUTE_CUSTOM_BUILD: "[Demonstration] Parallel: Cypress with Cucumber BDD
+    using cypress-cucumber-preprocessor"
 matrix:
   browser:
     - Chrome-latest
@@ -34,7 +34,7 @@ testSuites:
   - npx cypress run --browser=$browser --headed --config video=false --spec $test
 cypressOps:
   DedicatedProxy: false
-  Build: "[Demonstration] Cypress with Cucumber BDD using
+  Build: "[Demonstration] Parallel: Cypress with Cucumber BDD using
     cypress-cucumber-preprocessor"
   BuildTags: []
   Tags: []

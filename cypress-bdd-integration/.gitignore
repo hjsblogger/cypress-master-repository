@@ -47,3 +47,6 @@ cypress.env.json
 # Optional: Ignore compiled TS output if using TypeScript
 /dist/
 /build/
+
+# HyperExecute
+he_conv.yaml
