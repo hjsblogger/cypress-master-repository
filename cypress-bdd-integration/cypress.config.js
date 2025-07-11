@@ -31,7 +31,7 @@ module.exports = defineConfig({
     },
     stepDefinitions: [
       "cypress/e2e/step_defs/*.{js,ts}",
-      "cypress/e2e/com_step_defs/*.{js,ts}",
+      "cypress/e2e/common_step_defs/*.{js,ts}"
     ],
   },
 });
