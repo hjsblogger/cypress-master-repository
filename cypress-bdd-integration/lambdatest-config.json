@@ -23,7 +23,7 @@
       "reporter_config_file": "",
       "build_name": "[Demonstration] Cypress with Cucumber BDD using cypress-cucumber-preprocessor",
       "project-name": "cypress-cucumber-bdd-demo",
-      "parallels": 2,
+      "parallels": 4,
       "specs": "./cypress/e2e/scenarios/*.feature",
       "ignore_files": "",
       "network": true,
