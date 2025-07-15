@@ -36,8 +36,10 @@ cypress-bdd-integration-cloud:
 
 .PHONY: clean
 clean:
-    # This helped: https://gist.github.com/hbsdev/a17deea814bc10197285
-	find . -type f \( -name "*.mp4" -o -name "*.zip" \) -exec rm -rf {} +
+    # This helped: https://gist.github.com/hbsdev/a17deea814bc10197285 find . -type f \( -name "*.mp4" -o -name "*.zip" \) -exec rm -rf {} +
+	@find . \
+		\( -name "*.mp4" -o -name "*.zip" -o -name "node_modules" \) \
+		-exec rm -rf {} +
 	@echo "Clean Succeeded"
 
 .PHONY: distclean
