@@ -17,13 +17,20 @@
          "versions": [
             "latest-1"
          ]
+      },
+      {
+         "browser": "Firefox",
+         "platform": "Windows 11",
+         "versions": [
+            "latest"
+         ]
       }
    ],
    "run_settings": {
       "reporter_config_file": "",
       "build_name": "[Demonstration] Cypress with Cucumber BDD using cypress-cucumber-preprocessor",
       "project-name": "cypress-cucumber-bdd-demo",
-      "parallels": 4,
+      "parallels": 12,
       "specs": "./cypress/e2e/scenarios/*.feature",
       "ignore_files": "",
       "network": true,
@@ -35,7 +42,8 @@
          "@faker-js/faker": "^8.1.0"
       }
    },
-   "tunnel_settings": {
+   "tunnel_settings":
+   {
       "tunnel": false,
       "tunnel_name": null
    }
