@@ -1,43 +1,32 @@
 {
-  "name": "cypress-bdd-integration",
-  "version": "1.0.0",
-  "description": "Demonstration of Cypress with Cucumber BDD using cypress-cucumber-preprocessor",
-  "main": "index.js",
-  "scripts": {
-    "cypress:open": "cypress open",
-    "cypress:chrome": "cypress run --browser=chrome"
-  },
-  "keywords": [
-    "cypress",
-    "test",
-    "automation",
-    "web",
-    "automation",
-    "testing",
-    "cypress-bdd",
-    "cypress-cucumber-preprocessor"
-  ],
-  "author": "Himanshu Jagdish Sheth",
-  "license": "ISC",
-  "devDependencies":
-  {
-    "cypress": "^14.1.0",
-    "cypress-cucumber-preprocessor": "^4.3.1",
-    "typescript": "latest"
-  },
-  "dependencies": 
-  {
-    "@badeball/cypress-cucumber-preprocessor": "latest",
-    "@bahmutov/cypress-esbuild-preprocessor": "latest",
-    "dotenv": "^16.4.5"
-  },
-  "cypress-cucumber-preprocessor": {
-     "json": {
-       "enabled": false
+     "name": "cypress-bdd-integration",
+     "version": "1.0.0",
+     "description": "Demonstration of Cypress with Cucumber BDD using cypress-cucumber-preprocessor",
+     "main": "index.js",
+     "scripts": {
+       "cypress:open": "cypress open",
+       "cypress:chrome": "cypress run --browser=chrome"
      },
-     "stepDefinitions": [
-       "cypress/e2e/step_defs/*.{js,ts}",
-       "cypress/e2e/common_step_defs/*.{js,ts}"
-      ]
+     "keywords": [
+       "cypress",
+       "test",
+       "automation",
+       "web",
+       "automation",
+       "testing",
+       "cypress-bdd",
+       "cypress-cucumber-preprocessor"
+     ],
+     "author": "Himanshu Jagdish Sheth",
+     "license": "ISC",
+     "devDependencies": {
+       "@badeball/cypress-cucumber-preprocessor": "^22.2.0",
+       "@bahmutov/cypress-esbuild-preprocessor": "^2.2.5",
+       "cypress": "^14.1.0",
+       "esbuild": "^0.25.6",
+       "typescript": "latest"
+     },
+     "dependencies": {
+       "dotenv": "^16.4.5"
+     }
    }
-}
