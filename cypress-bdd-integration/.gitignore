@@ -11,8 +11,6 @@
 
 # Cucumber JSON reports (if generated)
 cucumber-json/
-cucumber-report.html
-cucumber-report/
 
 # Cypress cache
 /.cache/
