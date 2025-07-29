@@ -4,29 +4,34 @@
      "description": "Demonstration of Cypress with Cucumber BDD using cypress-cucumber-preprocessor",
      "main": "index.js",
      "scripts": {
-       "cypress:open": "cypress open",
-       "cypress:chrome": "cypress run --browser=chrome"
+          "cypress:open": "cypress open",
+          "cypress:chrome": "cypress run --browser=chrome",
+          "cy:run": "cypress run",
+          "cy:parallel": "cypress-parallel -s cy:run -t 4 -d 'cypress/e2e/**/*.feature'",
+          "cy:run:headed": "cypress run --browser chrome --headed",
+          "cy:parallel:headed": "cypress-parallel -s cy:run:headed -t 4 -d 'cypress/e2e/**/*.feature'"
      },
      "keywords": [
-       "cypress",
-       "test",
-       "automation",
-       "web",
-       "automation",
-       "testing",
-       "cypress-bdd",
-       "cypress-cucumber-preprocessor"
+          "cypress",
+          "test",
+          "automation",
+          "web",
+          "automation",
+          "testing",
+          "cypress-bdd",
+          "cypress-cucumber-preprocessor"
      ],
      "author": "Himanshu Jagdish Sheth",
      "license": "ISC",
      "devDependencies": {
-       "@badeball/cypress-cucumber-preprocessor": "^22.2.0",
-       "@bahmutov/cypress-esbuild-preprocessor": "^2.2.5",
-       "cypress": "^14.1.0",
-       "esbuild": "^0.25.6",
-       "typescript": "latest"
+          "@badeball/cypress-cucumber-preprocessor": "^22.2.0",
+          "@bahmutov/cypress-esbuild-preprocessor": "^2.2.5",
+          "cypress": "^14.1.0",
+          "cypress-parallel": "^0.15.0",
+          "esbuild": "^0.25.6",
+          "typescript": "latest"
      },
      "dependencies": {
-       "dotenv": "^16.4.5"
+          "dotenv": "^16.4.5"
      }
-   }
+}
