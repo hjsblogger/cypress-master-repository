@@ -2,6 +2,8 @@
 NPM := npm
 CYPRESS_DIR := $(shell pwd)
 CYPRESS_LOCAL_RUN := npx cypress run
+CYPRESS_LOCAL_PARALLEL_RUN := npx cypress-parallel
+CYPRESS_LOCAL_PARALLELS := 4
 CYPRESS_CLOUD_RUN := lambdatest-cypress
 PROJECT_NAME := Cypress with Cucumber BDD using cypress-cucumber-preprocessor
 
@@ -25,6 +27,14 @@ cypress-bdd-integration-local:
 	@echo "CYPRESS_DIR: $(CYPRESS_DIR)"
 	@echo "CYPRESS_LOCAL_RUN: $(CYPRESS_LOCAL_RUN)"
 	- cd $(CYPRESS_DIR) && $(CYPRESS_LOCAL_RUN) --browser chrome --headed
+
+cypress-bdd-integration-parallel-local:
+	@echo "EXEC_PLATFORM is $(EXEC_PLATFORM)"
+	@echo "CYPRESS_DIR: $(CYPRESS_DIR)"
+	@echo "CYPRESS_LOCAL_RUN: $(CYPRESS_LOCAL_RUN)"
+	- cd $(CYPRESS_DIR) && \
+		$(CYPRESS_LOCAL_PARALLEL_RUN) -s cy:run:headed -t \
+		$(CYPRESS_LOCAL_PARALLELS) -d 'cypress/e2e/**/*.feature'
 
 cypress-bdd-integration-cloud: EXEC_PLATFORM := cloud
 
