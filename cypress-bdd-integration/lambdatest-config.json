@@ -17,13 +17,6 @@
          "versions": [
             "latest-1"
          ]
-      },
-      {
-         "browser": "Firefox",
-         "platform": "Windows 11",
-         "versions": [
-            "latest"
-         ]
       }
    ],
    "run_settings": {
@@ -35,6 +28,7 @@
       "ignore_files": "",
       "network": true,
       "headless": false,
+      "video": true,
       "npm_dependencies": {
          "cypress": "^12.17.4",
          "@badeball/cypress-cucumber-preprocessor": "^15.0.0",
