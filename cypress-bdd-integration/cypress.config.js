@@ -7,6 +7,10 @@ module.exports = defineConfig({
   e2e:
   {
     specPattern: "**/cypress/e2e/scenarios/*.feature",
+    stepDefinitions: [
+      "cypress/e2e/step_defs/**/*.{js,ts}", 
+      "cypress/hooks/**/*.{js,ts}"
+    ],
     async setupNodeEvents(on, config) {
       await addCucumberPreprocessorPlugin(on, config);
       on(
