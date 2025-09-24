@@ -48,3 +48,10 @@ cypress.env.json
 
 # HyperExecute
 he_conv.yaml
+
+cypress/parallel-weights.json
+lambdatest_run.json
+multi-reporter-config.json
+runner-results/
+cypress/reports/
+he_conv.yaml
